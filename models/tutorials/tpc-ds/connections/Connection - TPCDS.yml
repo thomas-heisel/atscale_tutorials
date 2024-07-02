@@ -2,5 +2,6 @@ unique_name: Connection - TPCDS
 label: Connection - TPCDS
 object_type: connection
 as_connection: Postgres
-database: atscale_tutorial_data
-schema: tpcds
+database: SE_DEMO_LIBRARY
+schema: tpcds10tb
+
