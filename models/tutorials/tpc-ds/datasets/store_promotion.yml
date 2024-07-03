@@ -88,12 +88,12 @@ columns:
     data_type: decimal(38,0)
 connection_id: Connection - TPCDS
 dialects:
-  - dialect: Databricks
+  - dialect: DatabricksSQL
     sql: >-
       SELECT p.*, ss.*  FROM atscale_tutorial_data.tpcds.promotion p INNER JOIN
       atscale_tutorial_data.tpcds.store_sales ss ON ss.ss_promo_sk =
       p.p_promo_sk
-  - dialect: Bigquery
+  - dialect: BigQuery
     sql: >-
       SELECT p.*, ss.*  FROM atscale_tutorial_data.tpcds.promotion p INNER JOIN
       atscale_tutorial_data.tpcds.store_sales ss ON ss.ss_promo_sk =

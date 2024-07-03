@@ -94,7 +94,7 @@ columns:
     data_type: decimal(7,2)
 connection_id: Connection - TPCDS
 dialects:
-  - dialect: Databricks
+  - dialect: DatabricksSQL
     sql: >-
       SELECT ss.*, sr.*, case when (sr_returned_date_sk - ss_sold_date_sk <= 30)
       then '<= 30 days' when (sr_returned_date_sk - ss_sold_date_sk > 30) and  
@@ -107,7 +107,7 @@ dialects:
       JOIN atscale_tutorial_data.tpcds.store_sales ss ON ss.ss_ticket_number =
       sr.sr_ticket_number AND ss.ss_item_sk = sr.sr_item_sk AND
       ss.ss_customer_sk = sr.sr_customer_sk
-  - dialect: Bigquery
+  - dialect: BigQuery
     sql: >-
       SELECT ss.*, sr.*, case when (sr_returned_date_sk - ss_sold_date_sk <= 30)
       then '<= 30 days' when (sr_returned_date_sk - ss_sold_date_sk > 30) and  

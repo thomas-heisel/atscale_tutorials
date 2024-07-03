@@ -10,7 +10,7 @@ columns:
     data_type: boolean
 connection_id: Connection - TPCDS
 dialects:
-  - dialect: Databricks
+  - dialect: Snowflake
     sql: >-
       SELECT customer_sk, sold_year, CASE WHEN total_catalog > total_non_catalog
       THEN true ELSE false END catalog_preferred FROM ( SELECT customer_sk,
@@ -35,7 +35,7 @@ dialects:
       atscale_tutorial_data.tpcds.catalog_sales,
       atscale_tutorial_data.tpcds.date_dim WHERE cs_sold_date_sk = d_date_sk
       GROUP BY 1, 2, 3 ) t GROUP BY 1,2) z
-  - dialect: Bigquery
+  - dialect: BigQuery
     sql: >-
       SELECT customer_sk, sold_year, CASE WHEN total_catalog > total_non_catalog
       THEN true ELSE false END catalog_preferred FROM ( SELECT customer_sk,
