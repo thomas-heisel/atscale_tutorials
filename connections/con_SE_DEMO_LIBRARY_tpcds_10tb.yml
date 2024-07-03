@@ -1,0 +1,6 @@
+unique_name: con_SE_DEMO_LIBRARY_tpcds_10tb
+object_type: connection
+label: con_SE_DEMO_LIBRARY_tpcds_10tb
+as_connection: Snowflake
+database: SE_DEMO_LIBRARY
+schema: tpcds_10tb

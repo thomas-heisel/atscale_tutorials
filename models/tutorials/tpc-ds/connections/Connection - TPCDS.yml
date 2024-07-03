@@ -1,7 +1,7 @@
 unique_name: Connection - TPCDS
 label: Connection - TPCDS
 object_type: connection
-as_connection: Postgres
+as_connection: Snowflake
 database: SE_DEMO_LIBRARY
 schema: tpcds10tb
 
